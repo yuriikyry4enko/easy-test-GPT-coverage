@@ -1,0 +1,65 @@
+{
+  "name": "easy-test-coverage-GPT",
+  "displayName": "easy-test-coverage-GPT",
+  "publisher": "yuriikyry4enko7",
+  "description": "",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "activationEvents": [
+    "onCommand:easytestcoverage.covertWithTestCommand",
+    "onCommand:copySelectionCommand"
+  ],
+  "commands": [
+    {
+      "command": "easytestcoverage.covertWithTestCommand",
+      "title": "Covert With Tests"
+    }
+  ],
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "easytestcoverage.covertWithTestCommand",
+        "title": "Covert With Tests"
+      },
+      {
+        "command": "easytestcoverage.copySelectionCommand",
+        "title": "Covert with UnitTests",
+        "category": "Extension Tests"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorTextFocus",
+          "command": "easytestcoverage.copySelectionCommand",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.76.0",
+    "@vscode/test-electron": "^2.2.3",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "openai-api": "^1.3.1"
+  }
+}

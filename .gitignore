@@ -1,0 +1,13 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore built extension files
+out/
+dist/
+
+# Ignore package-lock.json and yarn.lock files
+package-lock.json
+yarn.lock
+
+# Ignore .vscode directory (may contain user-specific settings)
+.vscode/
