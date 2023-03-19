@@ -1,19 +1,19 @@
 {
   "name": "easy-test-coverage-GPT",
-  "displayName": "easy-test-coverage-GPT",
+  "displayName": "Easy Test Coverage GPT",
   "publisher": "yuriikyry4enko7",
-  "description": "",
+  "description": "This extension generates unit tests for C# code using OpenAI's GPT-3 API.",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.76.0"
   },
   "activationEvents": [
-    "onCommand:easytestcoverage.covertWithTestCommand",
+    "onCommand:easy-test-coverage-GPT.covertWithTestCommand",
     "onCommand:copySelectionCommand"
   ],
   "commands": [
     {
-      "command": "easytestcoverage.covertWithTestCommand",
+      "command": "easy-test-coverage-GPT.covertWithTestCommand",
       "title": "Covert With Tests"
     }
   ],
@@ -22,13 +22,19 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Easy Test Coverage GPT",
+      "type": "object",
+      "properties": {
+        "easy-test-coverage-GPT.openai-api-key": {
+          "type": "string",
+          "default": ""
+        }
+      }
+    },
     "commands": [
       {
-        "command": "easytestcoverage.covertWithTestCommand",
-        "title": "Covert With Tests"
-      },
-      {
-        "command": "easytestcoverage.copySelectionCommand",
+        "command": "easy-test-coverage-GPT.covertWithTestCommand",
         "title": "Covert with UnitTests",
         "category": "Extension Tests"
       }
@@ -37,7 +43,7 @@
       "editor/context": [
         {
           "when": "editorTextFocus",
-          "command": "easytestcoverage.copySelectionCommand",
+          "command": "easy-test-coverage-GPT.covertWithTestCommand",
           "group": "navigation"
         }
       ]
