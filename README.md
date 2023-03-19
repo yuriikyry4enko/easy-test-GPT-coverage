@@ -1,4 +1,4 @@
-# Easy Test Coverage
+# Easy GPT Test Coverage
 
 This is a VS Code extension that helps you generate nUnit tests for C# code, using OpenAI's GPT-3 language model.
 
