@@ -3,7 +3,7 @@
   "displayName": "Easy Test Coverage GPT",
   "publisher": "yuriikyry4enko7",
   "description": "This extension generates unit tests for C# code using OpenAI's GPT-3 API.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.76.0"
   },
