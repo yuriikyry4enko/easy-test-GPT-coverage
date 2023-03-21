@@ -9,7 +9,7 @@
   },
   "activationEvents": [
     "onCommand:easy-test-coverage-GPT.covertWithTestCommand",
-    "onCommand:copySelectionCommand"
+    "onCommand:easy-test-coverage-GPT.changeChatGPTApiKeyCommand"
   ],
   "commands": [
     {
@@ -32,11 +32,24 @@
         }
       }
     },
+    "keybindings": [
+      {
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "command": "easy-test-coverage-GPT.covertWithTestCommand",
+        "when": "editorHasSelection && editorTextFocus && !isEditorReadonly"
+      }
+    ],
     "commands": [
       {
         "command": "easy-test-coverage-GPT.covertWithTestCommand",
         "title": "Covert with UnitTests",
-        "category": "Extension Tests"
+        "category": "Easy Tests GPT"
+      },
+      {
+        "command": "easy-test-coverage-GPT.changeChatGPTApiKeyCommand",
+        "title": "Change Chat GPT API key",
+        "category": "Easy Tests GPT"
       }
     ],
     "menus": {
